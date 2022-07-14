@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Từ điển Anh - Việt</p>
+    <input type="text" name="search" id="input_word" placeholder="Nhập từ cần tìm"/>
+    <button onclick="Trans();">Dịch</button>
+    <p id="display"></p>
+</body>
+</html>
+<script>
+    let array = [
+        ["apple", "banana", "tomato", "potato", "hello",],
+        ["táo", "chuối", "cà chua", "khoai tây", "xin chào",],
+    ]
+    function Trans() {
+        let inp = document.getElementById("input_word").value;
+
+        for (let i = 0; i < array[0].length; i++) {
+            if (inp ===array[0][i] ) {
+                document.getElementById("display").innerHTML = array[1][i];
+            } else {
+                document.getElementById("display").innerHTML = "don't know :(";
+            }
+        }
+
+    }
+</script>
